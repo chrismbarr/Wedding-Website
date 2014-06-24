@@ -1,0 +1,3 @@
+AddType application/x-httpd-php55 .php
+RewriteEngine On
+RewriteRule ^results/?$ results.php [NC,L]
