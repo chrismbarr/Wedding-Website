@@ -58,7 +58,7 @@
 		public function Send(){
 			$isChangeForm = $this->data["changeForm"];
 
-			$to = 'Chris Barr <chris.m.barr@gmail.com>, Kirstin Reggel <k_reggel@yahoo.com>';
+			$to = 'Person 1 <example1@gmail.com>, Person 2 <example2@yahoo.com>';
 			$subject = $isChangeForm ? 'Wedding RSVP - Change request!':'Wedding RSVP - '.$this->data["name"];
 			$body = $isChangeForm ? $this->getChangeEmailBody() : $this->getRsvpEmailBody();
 
