@@ -1,0 +1,104 @@
+@import "variables.less";
+@import "../_bootstrap/variables.less";
+@import "../_bootstrap/mixins.less";
+
+//iPad fix: http://stackoverflow.com/a/15114444/79677
+html,
+body{
+	width:100%;
+	overflow-x:hidden;
+}
+
+#header{
+	text-align: center;
+	width: 100%;
+	padding: @spacing 0;
+	background: #FFF;
+}
+#title{
+	color: @color-purple;
+	text-transform: uppercase;
+	margin: 0;
+	
+	font-size: 30px;
+	line-height: 45px;
+}
+	#title-amp{
+		color: @color-green;
+	}
+
+#nav{
+	a{
+		border-radius: @border-radius-large;
+		color: @color-green;
+		display: inline-block;
+		font-size: 16px;
+		padding: 2px @spacing;
+		text-decoration: none;
+		
+		.transition(all 0.3s);
+
+		&.active,
+		&:hover{
+			background: @color-green;
+			color: @color-beige;
+		}
+	}
+}
+
+.main-section{
+	width: 100%;
+	height: auto;
+	padding: @spacing 0;
+}
+.photo-section{
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0!important;
+	position: relative;
+
+	-ms-behavior: url(../scripts/_libraries/background-size.min.htc); //IE8 fix
+	
+	img{
+		width: 100%;
+	}
+}
+
+#scroll-helper{
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	padding: @spacing @spacing (@spacing - 1) @spacing;
+	background: @color-beige; //fallback;
+	background: fadeout(@color-beige, 20%);
+	border-top-right-radius: @border-radius-large;
+	color: @color-purple;
+	font-weight: bold;
+}
+#scroll-helper-text{
+	margin-bottom: @spacing/2;
+}
+.scroll-helper-arrow{
+	border-color:  @color-purple transparent transparent transparent;
+	border-width: 15px 10px 0 10px;
+	border-style: solid;
+	width:0;
+	height:0;
+	margin: 0 auto 1px auto;
+}
+
+.section-title{
+	font-size: 40px;
+	color: @color-green;
+}
+
+.sub-section-title{
+	color: @color-purple;
+}
+
+
+.space-top{
+	display:inline-block;
+	margin-top: @spacing;
+}

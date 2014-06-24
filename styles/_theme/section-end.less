@@ -1,0 +1,29 @@
+@import "variables.less";
+@import "../_bootstrap/variables.less";
+@import "../_bootstrap/mixins.less";
+
+#bottom-quote{
+	position: relative;
+}
+#seuss-quote{
+	font-size: 20px;
+
+	q{
+		display:block;
+		color: @color-green;
+	}
+
+	cite{
+		color: @color-pink;
+	}
+}
+
+#credits{
+	bottom: @spacing;
+	color: @color-grey-dark;
+	position: absolute;
+
+	a{
+		color: @color-pink;
+	}
+}

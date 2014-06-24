@@ -1,0 +1,47 @@
+//Grid width stuff
+// Extra small screen / phone
+@screen-xs-min:              480px;
+@screen-xs-max:              (@screen-sm-min - 1);
+// Small screen / tablet
+@screen-sm-min:              768px;
+@screen-sm-max:              (@screen-md-min - 1);
+// Medium screen / desktop
+@screen-md-min:              992px;
+@screen-md-max:              (@screen-lg-min - 1);
+// Large screen / wide desktop
+@screen-lg-min:              1200px;
+
+@width-max: 1000px;
+@width-standard: 90%;
+
+//Theme colors
+@color-beige: #f7f7d2;
+@color-green: #8fbf60;
+@color-grey-light: #dcdcdc;
+@color-grey-dark: #594953;
+@color-pink: #ca0173;
+@color-purple: #711957;
+
+//things & stuffs
+@spacing: 10px;
+@img-path: '../images/';
+
+
+@photo-break-count: 5;
+.photo-breaks(@size){
+	@index: 1;
+	// Basic looping in LESS
+	.do-loop(@index) when (@index <= @photo-break-count) {
+		#photo-break-@{index}{background-image: url('@{img-path}section-break@{index}-@{size}.jpg');}
+	  // next iteration
+	  .do-loop(@index + 1);
+	}
+	.do-loop(@index);
+}
+
+
+@party-photo-size-md: 150px;
+@party-photo-size-xs: 100px;
+.make-party-photo(@size, @row, @col){
+	background-position: (@col - 1)*@size*-1 (@row - 1)*@size*-1;
+}

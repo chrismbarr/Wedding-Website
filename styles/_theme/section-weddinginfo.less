@@ -1,0 +1,206 @@
+@import "variables.less";
+@import "../_bootstrap/variables.less";
+@import "../_bootstrap/mixins.less";
+
+#wedding-info{
+	background-color: @color-purple;
+	color: @color-beige;
+
+	.section-title,
+	.sub-section-title{
+		color: @color-beige;
+	}
+
+	address{
+		background-color: darken(@color-pink, 8%);
+		border-radius: @border-radius-large;
+		padding: @spacing;
+	}
+
+	a{
+		color: @color-green;
+
+		&:hover{
+			color: darken(@color-green, 10%);
+		}
+	}
+}
+
+#wedding-info-date{
+	text-align: center;
+	text-transform: uppercase;
+	background: @color-beige;
+	color: @color-purple;
+	padding: @spacing;
+	border-radius: @border-radius-large;
+}
+
+#date-weekday{
+	font-size: 50px;
+	line-height: 48px;
+}
+
+#date-day{
+	color: @color-green;
+	font-size: 62px;
+	font-weight: bold;
+	line-height: 50px;
+
+	sup{
+		font-size: 30px;
+		top: -0.9em;
+		text-transform: lowercase;
+	}
+}
+
+#date-year{
+	font-size: 130px;
+	line-height: 95px;
+}
+
+#date-full-time{
+	font-size: 80px;
+	font-weight: bold;
+	line-height: 65px;
+}
+
+#date-time{
+	color: @color-green;
+}
+
+#wedding-info-remaining-days{
+	padding: @spacing;
+	background-color: @color-green;
+	border-radius: @border-radius-large;
+	text-align: center;
+	font-size: 30px;
+	line-height: 40px;
+	display:table;
+	width: 100%;
+
+	.fake-cell{
+		display:table-cell;
+		vertical-align: middle;
+	}
+
+	.remaining-days-attention{
+		font-size: 50px;
+		line-height: 45px;
+		color: @color-pink;
+	}
+}
+
+.wedding-party-person{
+	position: relative;
+	padding: @spacing/2;
+	margin-bottom: @spacing;
+	background: darken(@color-purple, 5%);
+	border-radius: @border-radius-large;
+	
+	.device-type-desktop &{
+		&:hover{
+			.wedding-party-info{
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}
+.wedding-party-name{
+	font-weight: bold;
+	margin: 0 0 @spacing/2 0;
+}
+
+.wedding-party-img{
+	margin: 0 auto;
+	background: url('../images/wedding-party.jpg') no-repeat;
+
+	.device-type-mobile &{
+		margin-bottom: @spacing;
+	}
+}
+
+.wedding-party-info{
+	
+	background: darken(@color-pink, 8%);
+	border-radius: @border-radius-large;
+	box-shadow: 0 0 20px @color-grey-dark;
+	padding: @spacing/2;
+	z-index: 1000;
+	
+	.transition(opacity 0.3s);
+
+
+	.browser-good.device-type-desktop &{
+		//Center it
+		position: absolute;
+		top: 0;
+		.translate3d(-50%, -50%,0);
+		margin-left: 50%;
+		margin-top: 50%;
+		visibility: hidden;
+		opacity: 0;
+		width: 125%;
+	}
+	
+	.device-type-mobile &,
+	.browser-bad &,{
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 70%;
+		margin-left: -30%;
+		//.translate3d(-50%, -50%,0);
+	}
+
+	.browser-bad &{
+		margin-left: -200px;
+		width: 400px;
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+	.device-type-mobile .wedding-party-info{
+		top: 50px;
+		margin-left: 0;
+		left: 5%;
+		width: 90%;
+	}
+}
+
+.wedding-party-info-title{
+	font-weight: bold;
+	margin: 0 0 @spacing/2 0;
+	font-size: 15px;
+}
+
+.wedding-party-more{
+	display: none;
+	
+	//This class is added to the body tag via JS on mobile devices
+	.device-type-mobile &,
+	.browser-bad &,{
+		display:block;
+		text-align: center;
+	}
+}
+
+//Only used for mobile devices
+#wedding-party-backdrop{
+	display: none;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(255,255,255,0.5);
+	z-index: 999;
+	
+
+	//IE8 can't do RGBA colors
+	.browser-bad &{
+		background: #FFF;
+		filter:alpha(opacity=50); 
+	}
+}

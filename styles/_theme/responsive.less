@@ -1,0 +1,182 @@
+@import "variables.less";
+@import "../_bootstrap/variables.less";
+@import "../_bootstrap/mixins.less";
+
+/*
+#responsive-thing:after{
+	position: fixed;
+	top:0;
+	right:0;
+	background: black;
+	color: rgb(3, 255, 3);
+	text-transform: uppercase;
+	text-align: center;
+	padding:3px;
+	border: 3px solid rgb(3, 255, 3);
+	border-bottom-left-radius: 8px;
+	border-top: none;
+	border-right: none;
+	z-index: 9999;
+}*/
+
+
+//XS screens in portrait orientation
+@media screen and (orientation:portrait) and (max-width: @screen-xs-max)  {
+	#nav{
+		text-align: left;
+
+		a{
+			display: block;
+			padding: 5px 0;
+		}
+	}
+}
+
+// Extra small screen / phone
+@media (max-width: @screen-xs-max) {
+	//#responsive-thing:after{content: 'XS';}
+	
+	#wedding-info-date{
+		margin-bottom: @spacing;
+	}
+	#date-year{
+		font-size: 120px;
+	}
+	#date-full-time{
+		font-size: 70px;
+	}
+	#map{
+		margin-top: @spacing*2;
+	}
+
+	#bottom-quote{
+		padding-top:50px;
+	}
+
+	#credits-website,
+	#credits-photos{
+		display: block;
+	}
+
+	#credits-divider{
+		display:none;
+	}
+
+	.photo-breaks("xs");
+}
+
+
+//Mobile & small screen
+@media (max-width: @screen-sm-max){
+	.wedding-party-img{
+		.square(@party-photo-size-xs);
+		background-size: 400px 200px; //scaled down so each image is now 100x100 instead of 150x150
+	}
+	#wedding-party-robin{	.make-party-photo(@party-photo-size-xs, 1, 1)}
+	#wedding-party-kelley{	.make-party-photo(@party-photo-size-xs, 1, 2)}
+	#wedding-party-lauren{	.make-party-photo(@party-photo-size-xs, 1, 3)}
+	#wedding-party-crystal{	.make-party-photo(@party-photo-size-xs, 1, 4)}
+	#wedding-party-peter{	.make-party-photo(@party-photo-size-xs, 2, 1)}
+	#wedding-party-shane{	.make-party-photo(@party-photo-size-xs, 2, 2)}
+	#wedding-party-sean{	.make-party-photo(@party-photo-size-xs, 2, 3)}
+	#wedding-party-derek{	.make-party-photo(@party-photo-size-xs, 2, 4)}
+}
+
+//All screens larger than mobile
+@media (min-width: @screen-sm-min){
+	#header{
+		position: fixed;
+		top:0;
+		left: 0;
+		z-index: 999;
+	}
+
+	.section-title{
+		font-size: 60px;
+	}
+	
+	.wedding-party-person{
+		padding: @spacing;
+	}
+
+	#seuss-quote{
+		font-size: 40px;
+	}
+}
+
+
+// Small screen / tablet
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+	//#responsive-thing:after{content: 'SM';}
+	
+	#title{
+		font-size: 40px;
+	}
+
+	#nav{
+		a{
+			font-size: 25px;
+		}
+	}
+
+	.main-section{
+		padding: 50px 0;
+	}
+	
+	.photo-breaks("sm");
+}
+
+//All desktops
+@media (min-width: @screen-md-min){
+	#title{
+		font-size: 60px;
+		float: left;
+		margin-right: @spacing*2;
+		line-height: 45px;
+	}
+	#title-line-two{
+		display:block;
+	}
+
+	#nav{
+		float: left;
+		margin-top: @spacing*1.5;
+		
+		a{
+			font-size: 30px;
+			padding: @spacing;
+		}
+	}
+
+	.main-section{
+		padding: 100px 0;
+	}
+
+	.wedding-party-img{
+		.square(@party-photo-size-md);
+	}
+
+	#wedding-party-robin{	.make-party-photo(@party-photo-size-md, 1, 1)}
+	#wedding-party-kelley{	.make-party-photo(@party-photo-size-md, 1, 2)}
+	#wedding-party-lauren{	.make-party-photo(@party-photo-size-md, 1, 3)}
+	#wedding-party-crystal{	.make-party-photo(@party-photo-size-md, 1, 4)}
+	#wedding-party-peter{	.make-party-photo(@party-photo-size-md, 2, 1)}
+	#wedding-party-shane{	.make-party-photo(@party-photo-size-md, 2, 2)}
+	#wedding-party-sean{	.make-party-photo(@party-photo-size-md, 2, 3)}
+	#wedding-party-derek{	.make-party-photo(@party-photo-size-md, 2, 4)}
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+	//#responsive-thing:after{content: 'MD';}
+
+	.photo-breaks("md");
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg-min) {
+	//#responsive-thing:after{content: 'LG';}
+	
+	.photo-breaks("lg");
+
+}

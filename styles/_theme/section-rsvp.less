@@ -1,0 +1,61 @@
+@import "variables.less";
+@import "../_bootstrap/variables.less";
+@import "../_bootstrap/mixins.less";
+
+#rsvp{
+	background-color: @color-beige;
+
+	textarea{
+		resize:vertical;
+		min-height: 73px;
+		height: 73px;
+	}
+}
+
+#error-display{
+	display: none; //initially hidden
+	position: fixed;
+
+	//Center on screen
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	
+	box-shadow: 0 0 100px @alert-danger-text, 0 5px 20px rgba(0,0,0,0.6);
+	z-index: 9999;
+
+	//Alert CSS
+	padding: @alert-padding;
+	margin-bottom: @line-height-computed;
+	border: 1px solid transparent;
+	border-radius: @alert-border-radius;
+	
+	.alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+
+	// Headings for larger alerts
+	h4 {
+		margin-top: 0;
+		// Specified for the h4 to prevent conflicts of changing @headings-color
+		color: inherit;
+	}
+
+	// Improve alignment and spacing of inner content
+	> p{
+		margin-bottom: 0;
+	}
+}
+
+#error-backdrop{
+	display:none;
+	background-color: rgba(255,255,255,0.75);
+	position: fixed;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+
+	z-index: 9998;
+}

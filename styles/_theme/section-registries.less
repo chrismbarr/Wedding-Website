@@ -1,0 +1,98 @@
+@import "variables.less";
+@import "../_bootstrap/variables.less";
+@import "../_bootstrap/mixins.less";
+
+#registries{
+	background-color: @color-green;
+
+	.section-title{
+		color: @color-beige;
+	}
+}
+
+.registry{
+	background-image: url('@{img-path}registries.png');
+	background-repeat: no-repeat;
+	display: block;
+
+	.hide-text();
+	.transition(all 0.3s);
+
+	&:hover{
+		.scale(1.1);
+	}
+}
+#registries-description{
+	font-size: 22px;
+}
+#registries-logos{
+	margin-top: 40px;
+}
+
+//DEFAULT LARGE
+@lg-width: 360px;
+#registry-bbb{
+	.size(@lg-width, 114px);
+}
+#registry-belk{
+	background-position: 0 -114px;
+	.size(@lg-width, 123px);
+}
+#registry-amazon{
+	background-position: 0 -237px;
+	.size(@lg-width, 113px);
+}
+
+//High-DPI screens ONLY when paired with a large desktop because smaller high-DPI screens will already have the image scalled down to look good.
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .registry{
+		background-image: url('@{img-path}registries@2x.png');
+		background-size: @lg-width 350px;
+	}
+}
+
+//Center the stacked logos on XS screens
+@media (max-width: @screen-xs-max) {
+	.registry{
+		margin: 0 auto 40px auto;
+	}
+}
+
+//XS & SMALL
+@media (max-width: @screen-sm-max) {
+	@md-width: 220px;
+	.registry{
+		background-size: @md-width 214px;
+	}
+	#registry-bbb{
+		.size(@md-width, 70px);
+	}
+	#registry-belk{
+		background-position: 0 -70px;
+		.size(@md-width, 75px);
+	}
+	#registry-amazon{
+		background-position: 0 -145px;
+		.size(@md-width, 68px);
+	}
+}
+
+
+//MEDIUM
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+	@md-width: 293px;
+	.registry{
+		background-size: @md-width 285px;
+	}
+	#registry-bbb{
+		.size(@md-width, 93px);
+	}
+	#registry-belk{
+		background-position: 0 -93px;
+		.size(@md-width, 100px);
+	}
+	#registry-amazon{
+		background-position: 0 -193px;
+		.size(@md-width, 91px);
+	}
+}
