@@ -2,5 +2,4 @@
 _unused/
 codekit-config.json
 *.sql
-
-rsvp/rsvp_Database_PRODUCTION.php
+rsvp/rsvp_Database.php
