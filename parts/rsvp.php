@@ -48,6 +48,7 @@
 					<label>
 						<input type="radio" name="plus_one" value="true"> I <em class='text-info'>will</em> be bringing a plus-one.
 					</label>
+					<small>(More than 1 person attending)</small>
 				</div>
 				
 			</div>
