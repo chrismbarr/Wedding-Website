@@ -61,7 +61,13 @@
 			$isChangeForm = $this->data["changeForm"];
 
 			$to = 'Person 1 <example1@gmail.com>, Person 2 <example2@yahoo.com>';
-			$subject = $isChangeForm ? 'Wedding RSVP - Change request!':'Wedding RSVP - '.$this->data["name"];
+
+			if($isChangeForm){
+				$subject = 'Wedding RSVP - Change request!';
+			}else{
+				$subject = 'Wedding RSVP - '.($this->data["attendance"] ? 'YES': 'NO').$this->data["name"];
+			}
+			
 			$body = $isChangeForm ? $this->getChangeEmailBody() : $this->getRsvpEmailBody();
 
 			$headers = "From: RSVP Mailer<RSVP@chrisandkirstin.com>\r\n";
