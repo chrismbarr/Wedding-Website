@@ -65,7 +65,7 @@
 			if($isChangeForm){
 				$subject = 'Wedding RSVP - Change request!';
 			}else{
-				$subject = 'Wedding RSVP - '.($this->data["attendance"] ? 'YES': 'NO').$this->data["name"];
+				$subject = 'Wedding RSVP - '.($this->data["attendance"] ? 'YES': 'NO').' - '.$this->data["name"];
 			}
 			
 			$body = $isChangeForm ? $this->getChangeEmailBody() : $this->getRsvpEmailBody();
