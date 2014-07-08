@@ -31,8 +31,10 @@
 			$html.="  <li><strong>Attendance:</strong> " . $this->BooleanToHtml("attendance") . " (" . $this->data["attendance_details"] . ")</li>";
 			$html.="  <li><strong>Name:</strong> " . $this->data["name"] . "</li>";
 			$html.="  <li><strong>Address:</strong>  <br/>" . nl2br($this->data["address"]) . "</li>";
-			$html.="  <li><strong>Plus One:</strong> " . $this->BooleanToHtml("plus_one") . "</li>";
-			
+			if($this->data["attendance"]){
+				$html.="  <li><strong>Plus One:</strong> " . $this->BooleanToHtml("plus_one") . "</li>";
+			}
+
 			$notes = $this->data["notes"];
 			if($notes !==""){
 				$html.="  <li><strong>Notes:</strong>  <br/>" . nl2br($notes) . "</li>";
