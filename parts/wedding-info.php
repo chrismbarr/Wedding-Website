@@ -36,6 +36,7 @@
 	</div>
 </div>
 
+<?php if(time() < mktime(0,0,0,7,20,2014)){ ?>
 <h3 class="sub-section-title">Where?</h3>
 <div class="row">
 	<div class="col-sm-3">
@@ -56,6 +57,7 @@
 		<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x88f555327f1ea19b%3A0x6ffb916e3c9732ec!2s108+King+St%2C+Adairsville%2C+GA+30103!5e0!3m2!1sen!2sus!4v1388633850620" width="100%" height="400"></iframe>
 	</div>
 </div>
+<?php } ?>
 
 <h3 class="sub-section-title">Who?</h3>
 
@@ -156,9 +158,11 @@
 	</div>
 </div>		
 
+<?php if(time() < mktime(0,0,0,7,20,2014)){ ?>
 <h3 class="sub-section-title">How? <small>(Hotel Info)</small></h3>
 <p>
 	A block of rooms has been reserved for July 18 - July 20 at the Hilton Garden Inn located in Cartersville, Georgia.
 	<br/>
 	<a href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/A/ATLCAGI-RBW-20140718/index.jhtml">Book your hotel room &amp; find out more about the hotel here.</a>
 </p>
+<?php } ?>
