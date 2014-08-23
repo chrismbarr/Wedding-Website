@@ -28,9 +28,12 @@
 				<nav id="nav">
 					<a href="#photo-break-1" class="hide"></a>
 					<a href="#our-story">Our Story</a>
-					<a href="#wedding-info">Wedding Info</a>
+					<? /*<a href="#wedding-info">Wedding Info</a>
 					<a href="#rsvp">RSVP</a>
-					<a href="#registries">Registries</a>
+					<a href="#registries">Registries</a> */ ?>
+					<a href="#engagement">Engagement</a>
+					<a href="#wedding">Wedding</a>
+					<a href="#honeymoon">Honeymoon</a>
 					<a href="#photo-break-5" class="hide"></a>
 				</nav>
 			</div>
@@ -56,9 +59,15 @@
 			<img class="hide js-mobile-image" src="" />
 		</section>
 
-		<section class="main-section" id="wedding-info">
+		<? /* <section class="main-section" id="wedding-info">
 			<div class="container">
-				<?php include_once('parts/wedding-info.php'); ?>
+				include_once('parts/wedding-info.php');
+			</div>
+		</section> */ ?>
+
+		<section class="main-section" id="engagement">
+			<div class="container">
+				<? include_once('parts/photos-engagement.php'); ?>
 			</div>
 		</section>
 
@@ -66,9 +75,15 @@
 			<img class="hide js-mobile-image" />
 		</section>
 
-		<section class="main-section" id="rsvp">
+		<? /*<section class="main-section" id="rsvp">
 			<div class="container">
-				<?php include_once('parts/rsvp.php'); ?>
+				include_once('parts/rsvp.php');
+			</div>
+		</section> */ ?>
+
+		<section class="main-section" id="wedding">
+			<div class="container">
+				<? include_once('parts/photos-wedding.php'); ?>
 			</div>
 		</section>
 
@@ -76,9 +91,15 @@
 			<img class="hide js-mobile-image" src="" />
 		</section>
 
-		<section class="main-section" id="registries">
+		<? /*<section class="main-section" id="registries">
 			<div class="container">
-				<?php include_once('parts/registries.php'); ?>
+				include_once('parts/registries.php');
+			</div>
+		</section>*/ ?>
+
+		<section class="main-section" id="honeymoon">
+			<div class="container">
+				<? include_once('parts/photos-honeymoon.php'); ?>
 			</div>
 		</section>
 
@@ -92,7 +113,7 @@
 			</div>
 		</section>
 
-		<div id="wedding-party-backdrop"></div>
+		<? /*<div id="wedding-party-backdrop"></div> */ ?>
 
 		<?php include_once("parts/scripts.php"); ?>
 	</body>
