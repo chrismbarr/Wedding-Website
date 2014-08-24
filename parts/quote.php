@@ -6,7 +6,5 @@
 <div id="credits">
 	<span class="credits">website by <a href="http://chris-barr.com">Chris Barr</a></span>
 	<span class="credits-divider">|</span>
-	<span class="credits">photos by <a href="http://swakphotography.com">SWAK Photography</a></span>
-	<span class="credits-divider">|</span>
 	<span class="credits">Get the code for this site <a href="https://github.com/chrismbarr/Wedding-Website">on GitHub</a>!</span>
 </div>
