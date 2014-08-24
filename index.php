@@ -6,9 +6,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<title>Chris And Kirstin</title>
-		<meta name="description" content="Chris & Kirstin are geting married on July 19th! Read about how they met and all kinds of wedding details!">
+		<meta name="description" content="Chris & Kirstin got married on July 19th! Read about them and see all kinds of photos!">
 		<meta property="og:title" content="Chris & Kirstin" />
-		<meta property="og:description" content="Chris & Kirstin are geting married on July 19th! Read about how they met and all kinds of wedding details!" />
+		<meta property="og:description" content="Chris & Kirstin got married on July 19th! Read about them and see all kinds of photos!" />
 		<meta property="og:url" content="http://chrisandkirstin.com" />
 		<meta property="og:image" content="http://chrisandkirstin.com/images/section-break1-sm.jpg" />
 
