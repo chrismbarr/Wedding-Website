@@ -2,13 +2,20 @@
 @import "../_bootstrap/variables.less";
 @import "../_bootstrap/mixins.less";
 
+#engagement,
+#wedding,
+#honeymoon{
+	.section-title{
+		margin-bottom: @spacing * 3;
+	}
+}
+
 #engagement{
 	background-color: @color-purple;
 	color: @color-beige;
 
 	.section-title{
 		color: @color-beige;
-		margin-bottom: @spacing * 3;
 	}
 
 	.thumbnail{
@@ -35,5 +42,19 @@
 
 	.section-title{
 		color: @color-beige;
+	}
+
+	.thumbnail{
+		background-color: @color-beige;
+		border-color: @color-purple;
+
+		&:hover{
+			background-color: @color-purple;
+			border-color: @color-beige;
+		}
+	}
+
+	a{
+		color: @color-purple;
 	}
 }
