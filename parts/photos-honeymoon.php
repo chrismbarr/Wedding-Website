@@ -13,4 +13,4 @@
 	<? } ?>
 </div>
 
-<p>photos by <a href="http://chris-barr.com">Chris Barr</a></h3>
+<p>photos by <a href="http://chris-barr.com">Chris Barr</a></p>

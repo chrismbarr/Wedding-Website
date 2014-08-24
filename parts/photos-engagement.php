@@ -13,4 +13,4 @@
 	<? } ?>
 </div>
 
-<p>photos by <a href="http://swakphotography.com">SWAK Photography</a></h3>
+<p>photos by <a href="http://swakphotography.com">SWAK Photography</a></p>
