@@ -13,6 +13,7 @@
 			<script src="scripts/_libraries/jquery.easing.js"></script>
 			<script src="scripts/_libraries/jquery.stellar.js"></script>
 			<script src="scripts/_bootstrap/scrollspy.js"></script>
+			<script src="scripts/_libraries/lightbox.js"></script>
 			<script src="scripts/site.js"></script>
 		<? }else{ ?>
 			<script src="scripts/site.min.js"></script>

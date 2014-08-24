@@ -1,3 +1,39 @@
 @import "variables.less";
 @import "../_bootstrap/variables.less";
 @import "../_bootstrap/mixins.less";
+
+#engagement{
+	background-color: @color-purple;
+	color: @color-beige;
+
+	.section-title{
+		color: @color-beige;
+		margin-bottom: @spacing * 3;
+	}
+
+	.thumbnail{
+		background-color: @color-beige;
+		border-color: @color-green;
+
+		&:hover{
+			background-color: @color-green;
+			border-color: @color-beige;
+		}
+	}
+
+	a{
+		color: @color-green;
+	}
+}
+
+#wedding{
+	background-color: @color-beige;
+}
+
+#honeymoon{
+	background-color: @color-green;
+
+	.section-title{
+		color: @color-beige;
+	}
+}
